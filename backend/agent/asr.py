@@ -1,7 +1,7 @@
 import requests
 from core.config import settings
 
-def asr(file_path):
+def audio_to_text(file_path):
     headers = {
         "Authorization": f"Bearer {settings.ASR_API_KEY}"
     }

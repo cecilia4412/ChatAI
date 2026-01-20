@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     ASR_API_KEY: str
     ASR_BASE_URL: str
 
+    # TAVILY 配置
+    TAVILY_API_KEY: str
+    
     class Config:
         env_file = ".env"
 

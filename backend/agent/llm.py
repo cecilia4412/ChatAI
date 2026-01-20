@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from agent.tools import tools
 from core.config import settings
-from agent.asr import asr
+from agent.asr import audio_to_text
 
 start_time = time.time()
 
@@ -18,7 +18,9 @@ llm = ChatOpenAI(
 )
 
 file_path = r"D:\ChatAI\audio.wav"
-user_content = asr(file_path)
+# user_content = audio_to_text(file_path)
+user_content = "我想要了解最新的事件"
+
 messages = [
     HumanMessage(content=user_content)
 ]
